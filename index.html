@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script type="text/javascript" src="seeThru.min.js"></script>
+    <script src="https://aframe.io/releases/0.9.1/aframe.min.js"></script>
+    <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.7.1/aframe/build/aframe-ar.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <a-scene embedded arjs>
+        
+        <video src="Karem_RA v3.mp4" loop="true" webkit-playsinline autoplay id="my-video" muted></video>
+       
+        <script>
+            var transparentVideo = seeThru.create('#my-video');
+            console.log(transparentVideo);
+        </script>
+
+        
+        <a-entity camera></a-entity>
+
+    </a-scene>
+
+</body>
+
+</html>
